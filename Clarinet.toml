@@ -1,0 +1,14 @@
+[project]
+name = "jicoin"
+description = "JICoin fungible token Clarinet project"
+authors = []
+telemetry = true
+cache_dir = "./.cache"
+
+[contracts.jicoin]
+path = "contracts/jicoin.clar"
+epoch = "latest"
+
+[repl.analysis]
+passes = ["check_checker"]
+check_checker = { trusted_sender = false, trusted_caller = false, callee_filter = false }
